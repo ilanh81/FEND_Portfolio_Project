@@ -423,6 +423,10 @@ textarea {
     padding: 0;
 }
 
+.container {
+    width: 100%;
+    position:relative;
+}
 .header_text{
     
     font-weight: 100;
@@ -430,11 +434,12 @@ textarea {
     
 }
 
-.img {
-    max-width: 100%;
+.logo-img, .first_img {
+   width: 100%;
    
-    
 }
+
+
 
 .sm-hidden{
     display: none;
@@ -450,6 +455,7 @@ textarea {
 .pictures {
    
     max-width: 100%;
+    padding:0;
     
 }
 
@@ -457,6 +463,11 @@ textarea {
 
 
 @media (min-width:600px){
+    
+    .header_text_box {
+    position: relative;
+    top: 50px;
+    }
     
     .row-md{
         width:50%;
@@ -514,6 +525,11 @@ textarea {
 
 @media (min-width:980px){
     
+    .header_text_box {
+    position: relative;
+    top: 50px;
+    }
+    
     .row{
         max-width:980px;
         margin:auto;
@@ -521,6 +537,7 @@ textarea {
     .img{
         max-width: 100%;
         margin:auto;
+       
     }
     
     .header_text{
@@ -531,23 +548,39 @@ textarea {
         font-size: 2.5em;
     }
     
-    .row-md+.img2, .row-md+.img3, .row-md+.p1, .row-md+.p2, .row-md+.p3 {
+    div.row-md.img1, div.row-md.img2, div.row-md.img3, div.row-md.p1, div.row-md.p2, div.row-md.p3 {
         width: calc(100%/3);
+        display: block;
+        height: 180px;
+        
+        
+        
     }
     
-    .div.img1.row-md {
-        width: calc(100%/3);
-    }
+    
     
     .img1 {
         order:0;
         
     }
+    
+    .row-md{
+        
+        padding: 0 3px 0 0px;
+    }
+    
+   .last {
+        padding:0;
+    }
+    
     .img2 {
         order:1;
+        
+        
     }
     .img3{
         order:2;
+        width: 100%;
     }
     .p1 {
         order:3;
@@ -587,6 +620,7 @@ textarea {
 .col-6 {
     
     width: calc((100%/12)*6);
+    height: auto;
 }
 
 .col-7 {
@@ -623,7 +657,7 @@ textarea {
 
 
 
-html, body{
+html, body, div, img{
     width: 100%;
     color: #2d3c49;
     font-family: 'Roboto', Open Sans, sans-serif;
@@ -635,14 +669,21 @@ img {
     
     margin:0;
     padding:0;
+    display: block; 
+    
 }
 
-.header_text_box{
-    margin-top: 25px;
-    margin-right: 25px;
+
     
 
+
+
+
+.header{
+    width:100%;
+   
 }
+
 
 .uppercase {
     text-transform: uppercase;
@@ -650,6 +691,7 @@ img {
 
 hr {
     width: 100%;
+    max-width: 980px;
     border: 2px solid #7d97ad;
     
 }
